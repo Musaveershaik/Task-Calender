@@ -1,0 +1,259 @@
+.calendar-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.calendar, .schedule {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(30, 34, 90, 0.08);
+  padding: 32px 28px;
+  min-width: 340px;
+}
+
+.calendar {
+  padding-right: 28px;
+}
+
+.calendar-headline {
+  display: flex;
+  margin-bottom: 18px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.calendar-headline-month {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.calendar-headline-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar-headline-control {
+  cursor: pointer;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 6px;
+  padding: 4px 14px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(55,48,163,0.04);
+  border: none;
+  outline: none;
+}
+
+.calendar-headline-control:hover, .calendar-headline-control:focus {
+  background: #6366f1;
+  color: #fff;
+}
+
+.calendar-headline-control-today {
+  margin: 0 6px;
+  background: #6366f1;
+  color: #fff;
+}
+
+.calendar-weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.calendar-weeks-grid-cell {
+  text-align: center;
+  padding: 4px 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e7ff;
+}
+
+.calendar-grid-cell {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e0e7ff;
+  border-right: 1px solid #e0e7ff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s;
+}
+
+.calendar-grid-cell:last-child {
+  border-right: none;
+}
+
+.calendar-grid-cell-inactive {
+  color: #b0b3c6;
+  background: #f8fafc;
+}
+
+.calendar-grid-cell-active {
+  background: #6366f1;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(99,102,241,0.10);
+  z-index: 1;
+}
+
+.calendar-grid-cell:hover:not(.calendar-grid-cell-active) {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.schedule {
+  margin-left: 0;
+  min-width: 280px;
+}
+
+.schedule-headline {
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  color: #3730a3;
+}
+
+/* Task Form Styles */
+.task-form {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-input {
+  padding: 10px 12px;
+  border: 1px solid #e0e7ff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.task-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.task-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-task-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.add-task-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.add-task-btn:active {
+  transform: translateY(0);
+}
+
+/* Task List Styles */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-tasks {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.task-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e0e7ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99,102,241,0.08);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
+.task-time {
+  font-size: 0.9rem;
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+
+.task-description {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .calendar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px 0;
+  }
+  .calendar, .schedule {
+    min-width: unset;
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
