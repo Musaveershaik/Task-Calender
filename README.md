@@ -2,7 +2,8 @@
 
 A beautiful and functional calendar application built with Angular 17, featuring a modern UI and task management capabilities. This project demonstrates advanced Angular concepts and best practices in modern web development.
 
-![Task Calendar Preview](https://i.imgur.com/placeholder.png)
+![Task Calender Preview](https://github.com/user-attachments/assets/15682929-d757-43ac-afab-f00721aee0bd)
+
 
 ## 🚀 Features
 
